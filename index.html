@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello Service Workers</title>
+</head>
+<body>
+<div><p>Hello Service Workers</p></div>
+
+<style>
+    html {
+        height: 100vh;
+    }
+
+    body {
+        height: 100vh;
+    }
+
+    div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
+
+    p {
+        color: #dc143c;
+        font-weight: bold;
+        font-size: 48px;
+    }
+</style>
+
+<script type="text/javascript">
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/service-worker.js');
+  }
+</script>
+</body>
+</html>
